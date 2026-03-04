@@ -83,7 +83,7 @@ export default function App() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             Stratify Performance helps clinics and small healthcare businesses turn real operational
-            bottlenecks into measurable AI wins — one project at a time, with a clear before-and-after.
+            bottlenecks into measurable AI wins one project at a time, with a clear before-and-after.
           </motion.p>
 
           <motion.p
@@ -523,7 +523,7 @@ export default function App() {
               AI that's safe, owned, and accountable.
             </h2>
             <p className="text-xl text-gray-500 max-w-2xl leading-relaxed">
-              Even small teams need clear ownership so AI is reliable — not "someone using ChatGPT on the side."
+              Even small teams need clear ownership so AI is reliable; not "someone using ChatGPT on the side."
               Every engagement defines a minimal governance structure from day one.
             </p>
           </motion.div>
@@ -611,9 +611,9 @@ export default function App() {
                 <ul className="space-y-6">
                   {[
                     'Licensed Physical Therapist (DPT) with 8+ years in clinical operations, utilization management, and performance improvement — I understand prior auth, denials, and documentation pain from the inside, not as a vendor.',
-                    'Hands-on background in revenue cycle, reporting, and healthcare analytics (SQL, Power BI, Excel). I can design the operating model and get into the weeds to ship real workflows.',
+                    'Hands-on background in reporting, revenue cycle, and healthcare analytics (SQL, Power BI, Excel). I can design the operating model and get into the weeds to ship real workflows.',
                     'Deep, practical AI experience applied to actual clinical and ops contexts — documentation, analysis, workflow automation, and agent design.',
-                    'Clear, narrow niche: "problem-first AI operating model for clinics" is a story most generic AI consultants can\'t match — and I won\'t drift from it.',
+                    'Clear, narrow niche: "problem-first AI operating model for clinics" is a story most generic AI consultants can\'t match and I won\'t drift from it.',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <CheckCircle className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
@@ -630,7 +630,7 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                "Stratify Performance exists to help humans and systems perform better — whether
+                "Stratify Performance exists to help humans and systems perform better, whether
                 that's a clinic team navigating real-world operations or a small healthcare business
                 building durable, measurable advantage with AI."
               </motion.blockquote>
