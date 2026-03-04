@@ -1,6 +1,5 @@
 import { motion } from 'motion/react';
 import {
-  Activity,
   ArrowRight,
   BarChart2,
   Bot,
@@ -8,8 +7,12 @@ import {
   Calendar,
   CheckCircle,
   ChevronRight,
+  ClipboardList,
   GitMerge,
   Mail,
+  Shield,
+  Target,
+  TrendingUp,
   Users,
   Zap,
 } from 'lucide-react';
@@ -24,22 +27,21 @@ export default function App() {
           <span className="font-serif italic text-base tracking-tight">Stratify Performance</span>
           <span className="hidden md:block h-4 w-px bg-white/20" />
           <span className="hidden md:block font-mono text-[9px] uppercase tracking-[0.2em] text-gray-500">
-            Clinical · Operations · Analytics
+            AI Consulting · Clinical Ops · Healthcare
           </span>
         </div>
         <div className="hidden md:flex gap-8 items-center">
           <a href="#who"      className="text-[11px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">Who I Help</a>
+          <a href="#model"    className="text-[11px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">Operating Model</a>
           <a href="#services" className="text-[11px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">Services</a>
-          <a href="#process"  className="text-[11px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">Process</a>
           <a href="#about"    className="text-[11px] uppercase tracking-[0.2em] hover:text-brand-accent transition-colors">About</a>
           <a
             href="mailto:chris.king@stratify-performance.com"
             className="px-5 py-2 bg-brand-accent text-white rounded-full text-[11px] uppercase tracking-[0.2em] font-medium hover:bg-brand-accent/80 transition-all"
           >
-            Book a Consult
+            Book a Discovery Call
           </a>
         </div>
-        {/* Mobile CTA */}
         <a
           href="mailto:chris.king@stratify-performance.com"
           className="md:hidden px-4 py-2 bg-brand-accent text-white rounded-full text-[10px] uppercase tracking-[0.2em]"
@@ -52,9 +54,7 @@ export default function App() {
           1. Hero
       ───────────────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex flex-col justify-center px-6 pt-28 pb-20">
-        {/* Faint background photo */}
         <div className="absolute inset-0 opacity-[0.04] bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070')] bg-cover bg-center" />
-        {/* Subtle grid */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="relative z-10 max-w-5xl mx-auto">
@@ -64,7 +64,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Stratify Performance – Clinical, Operations &amp; Analytics
+            Stratify Performance – AI Consulting
           </motion.span>
 
           <motion.h1
@@ -73,36 +73,45 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Workflow &amp; AI Playbooks for Clinics and Lean Healthcare Teams
+            The best AI strategy starts with your worst bottleneck.
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-400 leading-relaxed mb-12 max-w-2xl"
+            className="text-lg md:text-xl text-gray-400 leading-relaxed mb-4 max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            I help small clinics and digital health teams fix messy workflows, clean up reporting,
-            and safely plug in AI so staff save time and patients get better care.
+            Stratify Performance helps clinics and small healthcare businesses turn real operational
+            bottlenecks into measurable AI wins — one project at a time, with a clear before-and-after.
+          </motion.p>
+
+          <motion.p
+            className="font-mono text-xs uppercase tracking-[0.25em] text-gray-500 mb-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            Problem-first · One project at a time · Buy before build · Measure everything
           </motion.p>
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
           >
             <a
               href="mailto:chris.king@stratify-performance.com"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-brand-accent/80 transition-all"
             >
-              Book a 20-Minute Consult <ChevronRight className="w-4 h-4" />
+              Book a 30-Min Discovery Call <ChevronRight className="w-4 h-4" />
             </a>
             <a
-              href="#services"
+              href="#model"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 rounded-full text-sm uppercase tracking-widest hover:border-brand-accent hover:text-brand-accent transition-all"
             >
-              See Example AI Playbooks
+              See the Operating Model
             </a>
           </motion.div>
         </div>
@@ -121,10 +130,10 @@ export default function App() {
           >
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">Who I Help</span>
             <h2 className="text-4xl md:text-6xl font-serif italic mb-6 leading-tight">
-              Built for lean clinical teams.
+              Built for lean healthcare teams.
             </h2>
             <p className="text-xl text-gray-600 mb-12 leading-relaxed max-w-2xl">
-              Stratify Performance works with:
+              If you're feeling AI pressure without a clear path, this is for you.
             </p>
           </motion.div>
 
@@ -133,17 +142,17 @@ export default function App() {
               {
                 icon: <Users className="w-5 h-5" />,
                 label: 'Outpatient Clinics',
-                text: 'Small PT, rehab, and specialty practices navigating scheduling, prior auth, and ops pressure.',
+                text: 'PT, OT, rehab, pediatric therapy, and specialty practices navigating scheduling, prior auth, documentation, and ops pressure.',
               },
               {
                 icon: <Brain className="w-5 h-5" />,
-                label: 'UM & Care Management',
-                text: 'Utilization management and care management teams buried in manual reviews and disconnected data.',
+                label: 'Telehealth & Digital Health',
+                text: 'Telehealth platforms and digital health teams who need real operational leverage without enterprise overhead.',
               },
               {
                 icon: <Zap className="w-5 h-5" />,
-                label: 'Digital Health Teams',
-                text: 'Digital health startups and lean ops teams who need better workflows without enterprise overhead.',
+                label: 'Care Management & UM Teams',
+                text: 'Utilization management and care management teams buried in manual reviews, disconnected data, and denial rework.',
               },
             ].map((item, i) => (
               <motion.div
@@ -170,7 +179,7 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            This is about operations, workflows, and AI — not generic consulting.
+            This is about operations, workflows, and AI — not generic consulting. Not hype.
           </motion.p>
         </div>
       </section>
@@ -188,7 +197,9 @@ export default function App() {
             transition={{ duration: 0.7 }}
           >
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent mb-4 block">The Problem</span>
-            <h2 className="text-4xl md:text-6xl font-serif italic leading-tight">You know something's off.</h2>
+            <h2 className="text-4xl md:text-6xl font-serif italic leading-tight">
+              You know AI matters.<br />But you don't have a path.
+            </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -204,9 +215,9 @@ export default function App() {
               </h3>
               <ul className="space-y-6">
                 {[
-                  'Staff drowning in manual tasks and messaging',
-                  'Reports nobody trusts or understands',
-                  'Interest in AI, but no clear, safe way to start',
+                  'Staff drowning in repetitive tasks, documentation, and manual admin',
+                  'AI tools bought or tried but not actually mapped to real workflows',
+                  'No clear way to measure if any of it is working',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <span className="font-mono text-brand-accent text-xs mt-1.5 flex-shrink-0">0{i + 1}</span>
@@ -228,9 +239,9 @@ export default function App() {
               </h3>
               <ul className="space-y-6">
                 {[
-                  'Workflows grew organically and were never redesigned',
-                  'Data lives in different systems with no clear owner',
-                  'AI tools are generic and not mapped to your actual processes',
+                  'No operating model — AI is being adopted project-by-project with no repeatable process',
+                  'Pressure-driven tool purchases with no baseline metrics or defined owner',
+                  'Vendors pitch platforms, not workflows — you get demos, not results',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4">
                     <span className="font-mono text-gray-600 text-xs mt-1.5 flex-shrink-0">0{i + 1}</span>
@@ -244,9 +255,9 @@ export default function App() {
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          4. What I Do in 4–6 Weeks
+          4. The Operating Model
       ───────────────────────────────────────────────────────── */}
-      <section id="services" className="py-28 px-6 border-t border-brand-line bg-white text-black">
+      <section id="model" className="py-28 px-6 border-t border-brand-line bg-white text-black">
         <div className="max-w-5xl mx-auto">
           <motion.div
             className="mb-16"
@@ -256,38 +267,60 @@ export default function App() {
             transition={{ duration: 0.7 }}
           >
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">
-              What I Do in 4–6 Weeks
+              The Stratify Operating Model
             </span>
             <h2 className="text-4xl md:text-6xl font-serif italic mb-4 leading-tight">
-              Three focused deliverables.
+              Six steps. One problem at a time.
             </h2>
-            <p className="text-xl text-gray-500 max-w-xl">
-              Everything is customized to your clinic or team, not a generic template.
+            <p className="text-xl text-gray-500 max-w-2xl leading-relaxed">
+              Every engagement runs through the same repeatable framework. No tool tourism.
+              No vanity dashboards. Just problems, projects, and proof.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 num: '01',
-                icon: <GitMerge className="w-6 h-6" />,
-                title: 'Workflow Redesign',
+                icon: <ClipboardList className="w-5 h-5" />,
+                title: 'Inventory Real Problems',
                 description:
-                  'Map 2–3 of your highest-friction processes and simplify them so staff know exactly who does what, when.',
+                  'We run a structured Problem Inventory — not an AI brainstorm. Output: your top 10–15 operational bottlenecks with clear pain metrics (time, cost, risk, lost revenue).',
               },
               {
                 num: '02',
-                icon: <BarChart2 className="w-6 h-6" />,
-                title: 'Clean Reporting',
+                icon: <Target className="w-5 h-5" />,
+                title: 'Score Them Honestly',
                 description:
-                  'Build 1–2 practical views (Excel/Sheets/BI) so you can see no-shows, throughput, PA turnaround times, and key KPIs at a glance.',
+                  'Each problem is scored on data readiness, process stability, error economics, and deployment feasibility. Most ideas will be "not yet" — and that\'s the point.',
               },
               {
                 num: '03',
-                icon: <Bot className="w-6 h-6" />,
-                title: 'AI Playbooks',
+                icon: <GitMerge className="w-5 h-5" />,
+                title: 'Start with One Project',
                 description:
-                  'Create 2–3 step-by-step AI playbooks for your team—message triage, documentation, prior auth letters, monthly ops reviews—using your existing tools.',
+                  'Pick one problem that is meaningful enough to matter and contained enough to ship in 8–12 weeks. We treat it as an AI-assisted workflow with a clear owner and success criteria.',
+              },
+              {
+                num: '04',
+                icon: <Zap className="w-5 h-5" />,
+                title: 'Buy Before Build',
+                description:
+                  'We lean hard on proven tools, integrations, and existing platforms — not custom models — for early projects. Goal: prove value fast before heavier investment.',
+              },
+              {
+                num: '05',
+                icon: <TrendingUp className="w-5 h-5" />,
+                title: 'Measure Ruthlessly',
+                description:
+                  'Every project defines success before we start: time saved, errors reduced, throughput gained. You get a real before-and-after — no vanity metrics like "prompts used."',
+              },
+              {
+                num: '06',
+                icon: <Shield className="w-5 h-5" />,
+                title: 'Build Institutional Knowledge',
+                description:
+                  'Every project produces a runbook, lessons learned, and a kill-switch plan. Over time, these become your internal AI Playbook and a right-sized Center of Excellence.',
               },
             ].map((card, i) => (
               <motion.div
@@ -296,127 +329,263 @@ export default function App() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
               >
-                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-300 mb-6 block">
-                  {card.num}
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-300 mb-4 block">
+                  Step {card.num}
                 </span>
-                <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center mb-6 text-gray-500 group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                <div className="w-10 h-10 bg-gray-50 rounded-xl flex items-center justify-center mb-4 text-gray-500 group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
                   {card.icon}
                 </div>
-                <h3 className="text-2xl font-serif italic mb-4">{card.title}</h3>
+                <h3 className="text-lg font-serif italic mb-3 leading-snug">{card.title}</h3>
                 <p className="text-gray-500 leading-relaxed text-sm">{card.description}</p>
               </motion.div>
             ))}
           </div>
 
+          <motion.blockquote
+            className="mt-16 border-l-2 border-brand-accent pl-6 italic text-gray-500 text-lg leading-relaxed max-w-2xl"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            "We won't sell you an AI platform. We'll help you pick one problem, fix it, and build a
+            repeatable way to do the next ten."
+          </motion.blockquote>
+        </div>
+      </section>
+
+      {/* ─────────────────────────────────────────────────────────
+          5. Services
+      ───────────────────────────────────────────────────────── */}
+      <section id="services" className="py-28 px-6 border-t border-brand-line">
+        <div className="max-w-5xl mx-auto">
           <motion.div
-            className="mt-12"
+            className="mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent mb-4 block">
+              How We Work Together
+            </span>
+            <h2 className="text-4xl md:text-6xl font-serif italic mb-4 leading-tight">
+              Three tiers. Two quick wins.
+            </h2>
+            <p className="text-xl text-gray-400 max-w-xl leading-relaxed">
+              Start where you are. Scale only after you've seen proof.
+            </p>
+          </motion.div>
+
+          {/* Quick Wins */}
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-gray-600 mb-6">— Quick Wins to Get Started —</p>
+          <div className="grid md:grid-cols-2 gap-6 mb-16">
+            {[
+              {
+                badge: '1–2 Weeks',
+                title: 'Problem Inventory & AI Reality Check',
+                description:
+                  'A structured engagement that produces your top 10 scored problems, an honest view of which are AI-ready and which are not, and one recommended first project with a rough 8–12 week plan.',
+                highlight: 'Immediately separates you from hype-first vendors.',
+              },
+              {
+                badge: '4–8 Weeks',
+                title: 'One-Workflow AI Pilot',
+                description:
+                  'We implement one AI-assisted workflow — intake triage, patient follow-up, documentation prep — using your existing tools, with before/after metrics and a simple runbook you own.',
+                highlight: 'Fast proof of value. No new platforms required.',
+              },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                className="glass-card border border-brand-accent/20 hover:border-brand-accent/50 transition-all"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <span className="inline-block font-mono text-[10px] uppercase tracking-widest text-brand-accent border border-brand-accent/30 rounded-full px-3 py-1 mb-4">
+                  {item.badge}
+                </span>
+                <h3 className="text-xl font-serif italic mb-3 text-white">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed mb-4">{item.description}</p>
+                <p className="font-mono text-xs text-brand-accent">{item.highlight}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Three Tiers */}
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-gray-600 mb-6">— Full Engagement Tiers —</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                num: 'Tier 1',
+                badge: '2–4 Weeks',
+                icon: <ClipboardList className="w-6 h-6" />,
+                title: 'Problem-First Blueprint',
+                items: [
+                  'Problem inventory workshops',
+                  'Honest scoring: data readiness, process stability, feasibility',
+                  'Simple AI use policy & role definitions',
+                  'Shortlist of 1–3 ready-now AI projects with impact estimates',
+                ],
+              },
+              {
+                num: 'Tier 2',
+                badge: '8–12 Weeks',
+                icon: <Bot className="w-6 h-6" />,
+                title: 'Single High-Impact AI Project',
+                items: [
+                  'Deep dive on one workflow with baseline metrics',
+                  'Build vs buy evaluation + hands-on implementation',
+                  'Pilot with staff, training, change management',
+                  'Before/after ROI snapshot, runbook, kill-switch plan',
+                ],
+              },
+              {
+                num: 'Tier 3',
+                badge: 'Ongoing Retainer',
+                icon: <BarChart2 className="w-6 h-6" />,
+                title: 'Fractional AI CoE',
+                items: [
+                  'Run your AI backlog and roadmap continuously',
+                  'Monthly AI council + quarterly roadmap refresh',
+                  'One project at a time, every time',
+                  'Growing institutional AI playbook',
+                ],
+              },
+            ].map((tier, i) => (
+              <motion.div
+                key={i}
+                className="group relative p-8 bg-white/5 border border-white/10 rounded-2xl hover:border-brand-accent hover:bg-white/10 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">{tier.num}</span>
+                  <span className="font-mono text-[10px] uppercase tracking-widest text-brand-accent border border-brand-accent/30 rounded-full px-2 py-0.5">
+                    {tier.badge}
+                  </span>
+                </div>
+                <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-4 text-gray-400 group-hover:bg-brand-accent group-hover:text-white transition-all duration-300">
+                  {tier.icon}
+                </div>
+                <h3 className="text-xl font-serif italic mb-5 leading-snug text-white">{tier.title}</h3>
+                <ul className="space-y-3">
+                  {tier.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <CheckCircle className="w-4 h-4 text-brand-accent flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-400 text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            className="mt-10 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <a
-              href="mailto:chris.king@stratify-performance.com?subject=Sample%20Playbook%20Request"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-full text-sm uppercase tracking-widest text-gray-600 hover:bg-black hover:text-white hover:border-black transition-all"
+              href="mailto:chris.king@stratify-performance.com?subject=Discovery%20Call%20Request"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-full text-sm uppercase tracking-widest hover:bg-brand-accent/80 transition-all"
             >
-              Download Sample Playbook <ArrowRight className="w-4 h-4" />
+              Find out which tier fits <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          5. How It Works
+          6. Governance & Guardrails
       ───────────────────────────────────────────────────────── */}
-      <section id="process" className="py-28 px-6 border-t border-brand-line">
-        <div className="max-w-3xl mx-auto">
+      <section id="governance" className="py-28 px-6 border-t border-brand-line bg-white text-black">
+        <div className="max-w-5xl mx-auto">
           <motion.div
-            className="text-center mb-20"
+            className="mb-14"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent mb-4 block">How It Works</span>
-            <h2 className="text-4xl md:text-6xl font-serif italic leading-tight">Four steps. Six weeks.</h2>
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">
+              Roles &amp; Governance
+            </span>
+            <h2 className="text-4xl md:text-6xl font-serif italic mb-4 leading-tight">
+              AI that's safe, owned, and accountable.
+            </h2>
+            <p className="text-xl text-gray-500 max-w-2xl leading-relaxed">
+              Even small teams need clear ownership so AI is reliable — not "someone using ChatGPT on the side."
+              Every engagement defines a minimal governance structure from day one.
+            </p>
           </motion.div>
 
-          <div className="relative">
-            {/* Vertical connector line */}
-            <div className="absolute left-5 top-5 h-[calc(100%-80px)] w-px bg-gradient-to-b from-brand-accent/40 via-brand-accent/20 to-transparent" />
-
-            <div className="space-y-0">
-              {[
-                {
-                  week: 'Week 1',
-                  step: 'Discovery',
-                  description: '2–3 short interviews, current-state maps, and a small set of target metrics.',
-                },
-                {
-                  week: 'Weeks 2–3',
-                  step: 'Redesign',
-                  description: 'Future-state workflows, quick wins, and AI-assisted steps identified.',
-                },
-                {
-                  week: 'Weeks 3–4',
-                  step: 'Build',
-                  description: 'Dashboards/reports + 2–3 AI playbooks tailored to your tools.',
-                },
-                {
-                  week: 'Weeks 5–6',
-                  step: 'Pilot & Handover',
-                  description: 'Staff pilot, refine, and train; you keep the assets and process.',
-                },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className="flex gap-8 pb-14 last:pb-0"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: i * 0.1 }}
-                >
-                  <div className="w-10 h-10 rounded-full bg-brand-bg border border-brand-accent/40 flex items-center justify-center flex-shrink-0 z-10">
-                    <span className="font-mono text-brand-accent text-xs font-bold">{i + 1}</span>
-                  </div>
-                  <div className="pt-1.5">
-                    <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mb-1 block">
-                      {item.week}
-                    </span>
-                    <h3 className="text-2xl font-serif italic mb-2">{item.step}</h3>
-                    <p className="text-gray-400 leading-relaxed">{item.description}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          <motion.div
-            className="mt-16 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <a
-              href="mailto:chris.king@stratify-performance.com"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-full text-sm uppercase tracking-widest hover:bg-brand-accent/80 transition-all"
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
             >
-              See if your clinic is a fit — Book a call <ChevronRight className="w-4 h-4" />
-            </a>
-          </motion.div>
+              <p className="font-mono text-xs uppercase tracking-widest text-gray-400 mb-6">Roles We Define Together</p>
+              <ul className="space-y-5">
+                {[
+                  { role: 'Business Owner', desc: 'Accountable for the business outcome and process changes in their area.' },
+                  { role: 'AI Champion', desc: 'Coordinates AI projects, owns the backlog, ensures guardrails are followed.' },
+                  { role: 'IT / Data Liaison', desc: 'Manages system access, vendor approvals, and PHI/security constraints.' },
+                  { role: 'Domain Experts', desc: 'Front-line clinicians and ops staff who define reality and validate workflows.' },
+                  { role: 'Stratify', desc: 'Fractional CAIO + AI product lead: problem framing, architecture, implementation, measurement.' },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 pb-5 border-b border-gray-100 last:border-0">
+                    <span className="font-mono text-[10px] uppercase tracking-widest text-brand-accent mt-0.5 flex-shrink-0 w-28">{item.role}</span>
+                    <span className="text-gray-600 text-sm leading-relaxed">{item.desc}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+            >
+              <p className="font-mono text-xs uppercase tracking-widest text-gray-400 mb-6">Risk Tiers &amp; Guardrails</p>
+              <div className="space-y-4">
+                {[
+                  { tier: 'Tier 1 — Admin Only', desc: 'Scheduling, documentation drafts, communication prep. No PHI decisions.' },
+                  { tier: 'Tier 2 — Suggestions + Human Review', desc: 'AI recommends; clinician or ops staff reviews and approves. Mandatory sign-off.' },
+                  { tier: 'Tier 3 — Decision Support', desc: 'Structured guardrails, audit trail, and strict human-in-the-loop requirements.' },
+                ].map((item, i) => (
+                  <div key={i} className="p-5 border border-gray-100 rounded-xl hover:border-blue-200 transition-all">
+                    <p className="font-semibold text-gray-800 text-sm mb-1">{item.tier}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+                <div className="p-5 bg-gray-50 rounded-xl border border-gray-100 mt-6">
+                  <p className="font-mono text-xs uppercase tracking-widest text-gray-400 mb-2">Operating Cadence</p>
+                  <p className="text-gray-600 text-sm leading-relaxed">Monthly AI council check-in · Quarterly roadmap refresh · Runbook and kill-switch on every project</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          6. Why Work With Me
+          7. About
       ───────────────────────────────────────────────────────── */}
-      <section id="about" className="py-28 px-6 border-t border-brand-line bg-white text-black">
+      <section id="about" className="py-28 px-6 border-t border-brand-line">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-20 items-start">
-
             <div>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -424,11 +593,11 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
               >
-                <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">
+                <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent mb-4 block">
                   Why Work With Me
                 </span>
                 <h2 className="text-4xl md:text-6xl font-serif italic mb-10 leading-tight">
-                  Clinical credibility. Operational expertise.
+                  Clinical credibility meets operational expertise.
                 </h2>
               </motion.div>
 
@@ -441,13 +610,14 @@ export default function App() {
               >
                 <ul className="space-y-6">
                   {[
-                    'Licensed Physical Therapist (DPT) with 8+ years in clinical operations, utilization management, and performance improvement.',
-                    'Experience in revenue cycle, reporting, and healthcare analytics (SQL, Power BI).',
-                    'Hands-on work with AI tools for documentation, analysis, and workflow support.',
+                    'Licensed Physical Therapist (DPT) with 8+ years in clinical operations, utilization management, and performance improvement — I understand prior auth, denials, and documentation pain from the inside, not as a vendor.',
+                    'Hands-on background in revenue cycle, reporting, and healthcare analytics (SQL, Power BI, Excel). I can design the operating model and get into the weeds to ship real workflows.',
+                    'Deep, practical AI experience applied to actual clinical and ops contexts — documentation, analysis, workflow automation, and agent design.',
+                    'Clear, narrow niche: "problem-first AI operating model for clinics" is a story most generic AI consultants can\'t match — and I won\'t drift from it.',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-4">
                       <CheckCircle className="w-5 h-5 text-brand-accent flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700 leading-relaxed">{item}</span>
+                      <span className="text-gray-400 leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -460,8 +630,9 @@ export default function App() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
-                "Stratify Performance exists to help humans and systems perform better—whether
-                that's a clinician in the gym or a clinic team in the real world."
+                "Stratify Performance exists to help humans and systems perform better — whether
+                that's a clinic team navigating real-world operations or a small healthcare business
+                building durable, measurable advantage with AI."
               </motion.blockquote>
             </div>
 
@@ -479,52 +650,22 @@ export default function App() {
               />
               <div className="absolute bottom-8 left-8 right-8 bg-black text-white p-6 rounded-xl">
                 <p className="font-mono text-xs uppercase tracking-widest mb-1 text-gray-400">
-                  DPT · Clinical Operations · Analytics
+                  DPT · Clinical Operations · AI Consulting
                 </p>
                 <p className="text-2xl font-serif italic">Chris King</p>
+                <p className="font-mono text-[10px] uppercase tracking-widest text-gray-500 mt-1">
+                  Stratify Performance
+                </p>
               </div>
             </motion.div>
           </div>
-
-          {/* Coaching offer */}
-          <motion.div
-            className="mt-20 pt-12 border-t border-gray-100"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400 mb-6 block">
-              Also from Stratify Performance
-            </span>
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-6 border border-gray-100 rounded-2xl">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gray-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Activity className="w-6 h-6 text-gray-500" />
-                </div>
-                <div>
-                  <h4 className="text-lg font-serif italic mb-1">Stratify Performance – Coaching</h4>
-                  <p className="text-gray-500 text-sm">
-                    1:1 and small-group strength coaching for clinicians and busy professionals who
-                    want to perform better in and out of the clinic.
-                  </p>
-                </div>
-              </div>
-              <a
-                href="mailto:chris.king@stratify-performance.com?subject=Coaching%20Inquiry"
-                className="inline-flex items-center gap-2 px-6 py-3 border border-gray-200 rounded-full text-sm uppercase tracking-widest text-gray-600 hover:bg-black hover:text-white hover:border-black transition-all whitespace-nowrap"
-              >
-                Learn more about coaching <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </motion.div>
         </div>
       </section>
 
       {/* ─────────────────────────────────────────────────────────
-          7. Next Steps / Contact
+          8. Contact
       ───────────────────────────────────────────────────────── */}
-      <section id="contact" className="py-28 px-6 border-t border-brand-line">
+      <section id="contact" className="py-28 px-6 border-t border-brand-line bg-white text-black">
         <div className="max-w-3xl mx-auto">
           <motion.div
             className="text-center mb-16"
@@ -533,12 +674,13 @@ export default function App() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand-accent mb-4 block">Next Steps</span>
+            <span className="font-mono text-xs uppercase tracking-[0.3em] text-gray-400 mb-4 block">Next Steps</span>
             <h2 className="text-4xl md:text-6xl font-serif italic mb-6 leading-tight">
-              Ready to explore a 4–6 week workflow + AI project?
+              Ready to find your first real AI problem?
             </h2>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              If there isn't a clear ROI in the first conversation, I'll tell you that directly.
+            <p className="text-gray-500 text-lg leading-relaxed">
+              Start with a 30-minute discovery call. If there isn't a clear problem worth solving
+              in the first conversation, I'll tell you that directly.
             </p>
           </motion.div>
 
@@ -551,11 +693,11 @@ export default function App() {
           >
             <a
               href="mailto:chris.king@stratify-performance.com"
-              className="flex flex-col items-center p-10 border border-brand-line rounded-2xl hover:bg-white hover:text-black transition-all group"
+              className="flex flex-col items-center p-10 border border-gray-200 rounded-2xl hover:border-brand-accent hover:shadow-lg transition-all group"
             >
-              <Mail className="w-8 h-8 mb-4 group-hover:scale-110 transition-transform" />
-              <span className="font-mono text-xs uppercase tracking-widest mb-2">Email Me</span>
-              <span className="text-sm font-bold text-center break-all">
+              <Mail className="w-8 h-8 mb-4 text-gray-400 group-hover:text-brand-accent transition-colors" />
+              <span className="font-mono text-xs uppercase tracking-widest mb-2 text-gray-500">Email Me</span>
+              <span className="text-sm font-bold text-center break-all text-gray-800">
                 chris.king@stratify-performance.com
               </span>
             </a>
@@ -563,11 +705,11 @@ export default function App() {
               href="https://calendly.com/stratify"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center p-10 border border-brand-line rounded-2xl hover:bg-white hover:text-black transition-all group"
+              className="flex flex-col items-center p-10 border border-gray-200 rounded-2xl hover:border-brand-accent hover:shadow-lg transition-all group"
             >
-              <Calendar className="w-8 h-8 mb-4 group-hover:scale-110 transition-transform" />
-              <span className="font-mono text-xs uppercase tracking-widest mb-2">Book a Call</span>
-              <span className="text-sm font-bold">Schedule via Calendly</span>
+              <Calendar className="w-8 h-8 mb-4 text-gray-400 group-hover:text-brand-accent transition-colors" />
+              <span className="font-mono text-xs uppercase tracking-widest mb-2 text-gray-500">Book a Call</span>
+              <span className="text-sm font-bold text-gray-800">30-Min Discovery via Calendly</span>
             </a>
           </motion.div>
         </div>
@@ -579,7 +721,7 @@ export default function App() {
           <div>
             <p className="font-serif italic text-lg mb-1">Stratify Performance</p>
             <p className="font-mono text-[9px] uppercase tracking-widest text-gray-600">
-              Clinical, Operations &amp; Analytics · © 2026
+              AI Consulting · Clinical Ops · Healthcare · © 2026
             </p>
           </div>
           <div className="flex gap-8 items-center">
