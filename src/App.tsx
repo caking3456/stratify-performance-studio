@@ -1,4 +1,7 @@
 import { motion } from 'motion/react';
+
+const CALENDLY_URL = import.meta.env.VITE_CALENDLY_LINK as string;
+const LINKEDIN_URL = import.meta.env.VITE_LINKEDIN_LINK as string;
 import {
   ArrowRight,
   BarChart2,
@@ -703,7 +706,7 @@ export default function App() {
               </span>
             </a>
             <a
-              href="https://calendly.com/stratify"
+              href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-10 border border-gray-200 rounded-2xl hover:border-brand-accent hover:shadow-lg transition-all group"
@@ -727,7 +730,7 @@ export default function App() {
           </div>
           <div className="flex gap-8 items-center">
             <a
-              href="https://linkedin.com"
+              href={LINKEDIN_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[10px] uppercase tracking-widest text-gray-500 hover:text-white transition-colors"
